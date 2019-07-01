@@ -90,7 +90,8 @@ File cachedFile = new File(eclipseCacheDirectory, eclipseArchive)
 if (!cachedFile.isFile()) {
 	new AntBuilder().get(
 		src: downloadURL,
-		dest: cachedFile)
+		dest: cachedFile,
+		verbose: "on")
 }
 // Unzip/untar
 if (fileExtension.equals("zip")) {
